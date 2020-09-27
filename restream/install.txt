@@ -1,5 +1,7 @@
 ## You can now - Restream on Docker.
 
+## finally change video quality to. 384x160. - 480x200
+
 Install docker and connect via SSH
 
 ## Install resterm
