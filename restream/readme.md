@@ -29,15 +29,39 @@ rtmp://ip/live/external.stream?token=123456
 rtmp://ip/live/external.stream
 
 -_-_-_-_-_-_
-ADD ANOTHER CONTAINER
+ADD ANOTHER 3 containers - 
+default container is for low_en
 
-docker run -d --restart always -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" --name c2 -p 8091:8080 -v /mnt/c2/db:/restreamer/db datarhei/restreamer-armv7l:latest
-
-
-or run this ...
-
+# enhd - English HD Stream hd_en
 docker run -d --restart always \
-     --name restreamer2 \
+     --name enhd \
      -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
-     -p 8082:8080 -v /mnt/restreamer2/db:/restreamer/db \
+     -p 8082:8080 -v /mnt/enhd/db:/restreamer/db \
      datarhei/restreamer:latest
+
+# enhd - Hindi HD Stream hd_hi
+docker run -d --restart always \
+     --name hihd \
+     -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
+     -p 8084:8080 -v /mnt/hihd/db:/restreamer/db \
+     datarhei/restreamer:latest
+# enhd - English Low Stream low_hi
+docker run -d --restart always \
+     --name hilow \
+     -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
+     -p 8086:8080 -v /mnt/hilow/db:/restreamer/db \
+     datarhei/restreamer:latest
+
+## now four servers.
+
+http://167.71.239.179:8080/ : 
+rtmp://167.71.239.179/live/low_en
+
+http://167.71.239.179:8082/
+rtmp://167.71.239.179/live/hd_en
+
+http://167.71.239.179:8084/
+rtmp://167.71.239.179/live/low_hi
+
+http://167.71.239.179:8086/
+rtmp://167.71.239.179/live/hd_hi
