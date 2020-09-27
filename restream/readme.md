@@ -6,7 +6,7 @@ Install docker and connect via SSH
 
 docker pull datarhei/restreamer
 
-docker run -d --restart always --name restreamer 
+docker run -d --restart always --name  restreamer-armv7l 
      -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" 
      -p 8080:8080 -v /mnt/restreamer/db:/restreamer/db 
      datarhei/restreamer:latest
