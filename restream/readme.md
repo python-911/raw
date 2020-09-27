@@ -11,17 +11,19 @@ docker run -d --restart always --name restreamer
      -p 8080:8080 -v /mnt/restreamer/db:/restreamer/db 
      datarhei/restreamer:latest
 
-install - rtmp restream
+## install - rtmp restream
 
 docker run  -p 1935:1935  datarhei/restreamer
 
-add token to make it secure 
+## add token to make it secure 
 
 docker run -p 1935:1935 -e RS_TOKEN=123456 datarhei/restreamer
 
-without token
+## Own server will stream now.
 
 rtmp://ip/live/external.stream
-
 with token
-rtmp://localhost/live/external.stream?token=123456
+rtmp://ip/live/external.stream?token=123456
+
+# watch live stream from own server
+rtmp://ip/live/external.stream
