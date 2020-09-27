@@ -6,11 +6,11 @@ Install docker and connect via SSH
 
 docker pull datarhei/restreamer
 
-docker run -d --restart always --name  restreamer-armv7l 
-     -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" 
-     -p 8080:8080 -v /mnt/restreamer/db:/restreamer/db 
+docker run -d --restart always \
+     --name 1 \
+     -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
+     -p 8082:8080 -v /mnt/1/db:/restreamer/db \
      datarhei/restreamer:latest
-
 ## install - rtmp restream
 
 docker run  -p 1935:1935  datarhei/restreamer
@@ -34,22 +34,22 @@ default container is for low_en
 
 # enhd - English HD Stream hd_en
 docker run -d --restart always \
-     --name enhd \
+     --name 2 \
      -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
-     -p 8082:8080 -v /mnt/enhd/db:/restreamer/db \
+     -p 8082:8080 -v /mnt/2/db:/restreamer/db \
      datarhei/restreamer:latest
 
 # enhd - Hindi HD Stream hd_hi
 docker run -d --restart always \
-     --name hihd \
+     --name 3 \
      -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
-     -p 8084:8080 -v /mnt/hihd/db:/restreamer/db \
+     -p 8084:8080 -v /mnt/3/db:/restreamer/db \
      datarhei/restreamer:latest
 # enhd - English Low Stream low_hi
 docker run -d --restart always \
-     --name hilow \
+     --name 4 \
      -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
-     -p 8086:8080 -v /mnt/hilow/db:/restreamer/db \
+     -p 8086:8080 -v /mnt/4/db:/restreamer/db \
      datarhei/restreamer:latest
 
 ## now four servers.
