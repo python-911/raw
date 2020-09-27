@@ -12,4 +12,16 @@ docker run -d --restart always --name restreamer
      datarhei/restreamer:latest
 
 install - rtmp restream
+
 docker run  -p 1935:1935  datarhei/restreamer
+
+add token to make it secure 
+
+docker run -p 1935:1935 -e RS_TOKEN=123456 datarhei/restreamer
+
+without token
+
+rtmp://ip/live/external.stream
+
+with token
+rtmp://localhost/live/external.stream?token=123456
