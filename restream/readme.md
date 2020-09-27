@@ -1,4 +1,4 @@
-You can now - Restream on Docker.
+## You can now - Restream on Docker.
 
 Install docker and connect via SSH
 
@@ -27,3 +27,10 @@ rtmp://ip/live/external.stream?token=123456
 
 # watch live stream from own server
 rtmp://ip/live/external.stream
+
+-_-_-_-_-_-_
+ADD ANOTHER CONTAINER
+
+docker run -d --restart always -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" --name c2 -p 8091:8080 -v /mnt/c2/db:/restreamer/db datarhei/restreamer-armv7l:latest
+
+
