@@ -34,3 +34,10 @@ ADD ANOTHER CONTAINER
 docker run -d --restart always -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" --name c2 -p 8091:8080 -v /mnt/c2/db:/restreamer/db datarhei/restreamer-armv7l:latest
 
 
+or run this ...
+
+docker run -d --restart always \
+     --name restreamer \
+     -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
+     -p 8082:8080 -v /mnt/restreamer/db:/restreamer/db \
+     datarhei/restreamer:latest
