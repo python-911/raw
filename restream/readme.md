@@ -37,7 +37,7 @@ docker run -d --restart always -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" --n
 or run this ...
 
 docker run -d --restart always \
-     --name restreamer \
+     --name restreamer2 \
      -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
-     -p 8082:8080 -v /mnt/restreamer/db:/restreamer/db \
+     -p 8082:8080 -v /mnt/restreamer2/db:/restreamer/db \
      datarhei/restreamer:latest
