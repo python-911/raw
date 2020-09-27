@@ -14,7 +14,7 @@ ffmpeg -re -i "https://prod-fastly-ap-south-1.video.pscp.tv/Transcoding/v1/hls/g
 
 ffmpeg -re -i "http://89.187.169.204:2200/R-EX/SPORTS_STAR_SPORTS_1_ENGLISH_HD-in/playlist.m3u8?token=" -acodec libmp3lame -ar 44100 -b:a 128k -pix_fmt yuv420p -profile:v baseline -s 420x360 -bufsize 6000k -vb 400k -maxrate 1500k -deinterlace -vcodec libx264 -preset veryfast -g 30 -r 30 -f flv "rtmp://in.pscp.tv:80/x/57e72b9zkaag"
 
-
+rtmp://bangalore.restream.io/live/re_1219145_fa82dcf356d97948ac5a
 
 
 
