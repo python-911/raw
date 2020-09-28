@@ -19,9 +19,9 @@ docker build -t restreamer
 docker pull datarhei/restreamer
 
 docker run -d --restart always \
-     --name 1 \
+     --name ss1 \
      -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
-     -p 8082:8080 -v /mnt/1/db:/restreamer/db \
+     -p 8082:8080 -v /mnt/ss1/db:/restreamer/db \
      datarhei/restreamer:latest
 ## install - rtmp restream
 
@@ -46,22 +46,22 @@ default container is for low_en
 
 # enhd - English HD Stream hd_en
 docker run -d --restart always \
-     --name 2 \
+     --name ss2 \
      -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
-     -p 8082:8080 -v /mnt/2/db:/restreamer/db \
+     -p 8082:8080 -v /mnt/ss2/db:/restreamer/db \
      datarhei/restreamer:latest
 
 # enhd - Hindi HD Stream hd_hi
 docker run -d --restart always \
-     --name 3 \
+     --name ss3 \
      -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
-     -p 8084:8080 -v /mnt/3/db:/restreamer/db \
+     -p 8084:8080 -v /mnt/ss3/db:/restreamer/db \
      datarhei/restreamer:latest
 # enhd - English Low Stream low_hi
 docker run -d --restart always \
-     --name 4 \
+     --name ss4 \
      -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
-     -p 8086:8080 -v /mnt/4/db:/restreamer/db \
+     -p 8086:8080 -v /mnt/ss4/db:/restreamer/db \
      datarhei/restreamer:latest
 
 ## now four servers.
