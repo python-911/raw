@@ -21,7 +21,7 @@ docker pull datarhei/restreamer
 docker run -d --restart always \
      --name ss1 \
      -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
-     -p 8082:8080 -v /mnt/ss1/db:/restreamer/db \
+     -p 8080:8080 -v /mnt/ss1/db:/restreamer/db \
      datarhei/restreamer:latest
 ## install - rtmp restream
 
