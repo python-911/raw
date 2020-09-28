@@ -19,7 +19,7 @@ ffmpeg -re -i "http://195.181.172.83:2200/EX/beIN_Sports_13_HD-ar/tracks-v1a1/mo
 
 
 
-ffmpeg -re -i "http://195.181.172.83:2200/EX/beIN_Sports_13_HD-ar/tracks-v1a1/mono.m3u8?token=" -acodec libmp3lame -ar 44100 -b:a 64k -pix_fmt yuv420p -profile:v baseline -s 426x240 -bufsize 6000k -vb 400k -maxrate 700k -deinterlace -vcodec libx264 -preset fast -g 30 -r 30 -f flv "rtmp://128.199.23.231/live/low_en"
+ffmpeg -re -i "http://195.181.172.83:2200/EX/beIN_Sports_13_HD-ar/tracks-v1a1/mono.m3u8?token=" -acodec libmp3lame -ar 44100 -b:a 64k -pix_fmt yuv420p -profile:v baseline -s 426x240 -bufsize 6000k -vb 400k -maxrate 700k -deinterlace -vcodec libx264 -preset fast -g 30 -r 30 -f flv "rtmp://bangalore.restream.io/live/re_1219145_fa82dcf356d97948ac5a"
 
 
 ## restream.io keys
