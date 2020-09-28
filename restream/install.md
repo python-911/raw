@@ -8,10 +8,12 @@ Install docker and connect via SSH
 
 low live.json file - 
 
-goto /var/lib and type find -name live.json 
-note - id enter in id at conf/ 
+goto /var/lib/docker/overlay2
 
-wget https://raw.githubusercontent.com/python-911/restreamer/master/conf/live.json
+find -name live.json 
+edit live.json and add
+
+"-s 427x240",
 
 
 
