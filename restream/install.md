@@ -6,12 +6,13 @@ Install docker and connect via SSH
 
 ## Install resterm
 
+low live.json file - 
 
-Install from own git.
+goto /var/lib and type find -name live.json 
+note - id enter in id at conf/ 
 
-git clone https://github.com/python-911/restreamer
+wget https://raw.githubusercontent.com/python-911/restreamer/master/conf/live.json
 
-docker build -t restreamer
 
 
 #install official
@@ -23,6 +24,7 @@ docker run -d --restart always \
      -e "RS_USERNAME=admin" -e "RS_PASSWORD=admin" \
      -p 8080:8080 -v /mnt/ss1/db:/restreamer/db \
      datarhei/restreamer:latest
+
 ## install - rtmp restream
 
 docker run  -p 1935:1935  datarhei/restreamer
