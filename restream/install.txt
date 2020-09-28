@@ -6,6 +6,16 @@ Install docker and connect via SSH
 
 ## Install resterm
 
+
+Install from own git.
+
+git clone https://github.com/python-911/restreamer
+
+docker build -t restreamer
+
+
+#install official
+
 docker pull datarhei/restreamer
 
 docker run -d --restart always \
