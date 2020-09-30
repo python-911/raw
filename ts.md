@@ -3,3 +3,13 @@
 oc- 72f51ccc-f73b-4bfc-b015-5bc19c4abd04
 
 
+
+Delete EventPaymentStripeActivity.java file. 
+
+And in StripePaymentActivity.java file 
+
+find “stripe.createToken”. 
+
+Change it to stripe.createCardToken,
+
+
